@@ -60,7 +60,7 @@ export async function fetchCommands(): Promise<LinuxCommandExtended[]> {
     throw new Error(`Failed to fetch command list: ${response.status}`);
   }
 
-  const commands: Record<string, LinuxCommandRaw> = await response.json();
+  const commands: Record<string, LinuxCommandRaw> = (await response.json()) as Record<string, LinuxCommandRaw>;
 
   // Cache the result
   cache.set(
