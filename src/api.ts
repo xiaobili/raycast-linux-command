@@ -68,7 +68,7 @@ export async function fetchCommands(): Promise<LinuxCommandExtended[]> {
     JSON.stringify({
       data: commands,
       timestamp: Date.now(),
-    })
+    }),
   );
 
   return Object.values(commands).map(transformCommand);
@@ -125,7 +125,7 @@ export async function fetchCommandDetail(commandName: string): Promise<CommandDe
     JSON.stringify({
       data: detail,
       timestamp: Date.now(),
-    })
+    }),
   );
 
   return detail;
@@ -209,7 +209,7 @@ export function searchCommands(commands: LinuxCommandExtended[], keyword: string
   const lowerKeyword = keyword.toLowerCase();
 
   return commands.filter(
-    (cmd) => cmd.name.toLowerCase().includes(lowerKeyword) || cmd.description.toLowerCase().includes(lowerKeyword)
+    (cmd) => cmd.name.toLowerCase().includes(lowerKeyword) || cmd.description.toLowerCase().includes(lowerKeyword),
   );
 }
 

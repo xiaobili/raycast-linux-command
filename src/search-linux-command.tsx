@@ -32,7 +32,7 @@ export default function Command() {
     ? commands.filter(
         (cmd) =>
           cmd.name.toLowerCase().includes(searchText.toLowerCase()) ||
-          cmd.description.toLowerCase().includes(searchText.toLowerCase())
+          cmd.description.toLowerCase().includes(searchText.toLowerCase()),
       )
     : commands;
 
