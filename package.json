@@ -4,7 +4,8 @@
   "title": "Linux Command",
   "description": "Search Linux commands and view their usage with examples",
   "icon": "command-icon.png",
-  "author": "user",
+  "author": "xiaobili",
+  "owner": "xiaobili",
   "categories": [
     "Developer Tools",
     "Documentation"
